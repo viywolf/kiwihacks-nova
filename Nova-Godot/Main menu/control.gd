@@ -21,7 +21,7 @@ func _on_settings_pressed() -> void:
 	$Settings.show()
 
 func _on_button_pressed() -> void:
-		$Settings.hide()
+	$Settings.hide()
 
 
 	
