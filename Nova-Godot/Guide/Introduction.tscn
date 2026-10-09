@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://6oxevg6h6m4u" path="res://assets/textures/stars_milky_way.jpg" id="1_12k3b"]
 [ext_resource type="Script" uid="uid://dfj0qqsxp7ayq" path="res://Guide/introduction.gd" id="1_q1j6f"]
+[ext_resource type="Script" uid="uid://dlytdjxlcmjdf" path="res://Guide/label.gd" id="3_fg0sy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
 bg_color = Color(0.08620838, 0.08925489, 0.12509745, 0.6901961)
@@ -54,3 +55,10 @@ Stars are massive nuclear reactors that forge the heavy chemical elements—such
 
 "
 autowrap_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=290377679]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Loading..."
+script = ExtResource("3_fg0sy")
