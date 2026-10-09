@@ -30,13 +30,13 @@ offset_bottom = 624.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1408523919]
-offset_left = 303.0
+offset_left = 182.0
 offset_top = 34.0
-offset_right = 823.0
-offset_bottom = 624.0
+offset_right = 1002.0
+offset_bottom = 558.0
 
 [node name="Label" type="Label" parent="ScrollContainer" unique_id=421956046]
-custom_minimum_size = Vector2(500, 0)
+custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 text = "The observable universe is a spherical region of the universe centered on the observer containing all the matter and energy whose light or signals have had time to reach Earth since the Big Bang 13.8 billion years ago. 
 
@@ -62,3 +62,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "Loading..."
 script = ExtResource("3_fg0sy")
+
+[node name="Click" type="Label" parent="." unique_id=895215376]
+offset_left = 514.0
+offset_top = 575.0
+offset_right = 643.0
+offset_bottom = 598.0
+text = "Click to continue"
