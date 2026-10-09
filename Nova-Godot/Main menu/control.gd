@@ -7,7 +7,7 @@ func _ready():
 	
 func play():
 	get_tree().change_scene_to_file(
-		'res://ZoomScene/zoom_scene_3d.tscn'
+		'res://Guide/Introduction.tscn'
 		
 	)
 	
