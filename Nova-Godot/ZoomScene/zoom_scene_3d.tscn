@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://lvvihcdhowvj" path="res://assets/Solar+System.fbx" id="5_6rw0f"]
 [ext_resource type="Texture2D" uid="uid://bpewa60baejs2" path="res://assets/world_map.png" id="5_68dyh"]
 [ext_resource type="Texture2D" uid="uid://druor1oluvjxd" path="res://assets/nz_map.png" id="5_hs834"]
+[ext_resource type="AudioStream" uid="uid://dk6tk34qkjfkq" path="res://audio.mp3" id="7_hs834"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bieax"]
 panorama = ExtResource("2_6rw0f")
@@ -41,6 +42,7 @@ text = "Hello"
 transform = Transform3D(-0.032872073, 0, 0.99945956, 0, 1, 0, -0.99945956, 0, -0.032872073, -1.6851797, -17.5, 71.074776)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=8015377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45)
 script = ExtResource("1_jej76")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1825008648]
@@ -89,8 +91,9 @@ shape = SubResource("BoxShape3D_8vrlf")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1537875488]
 
 [node name="NZ_map" type="Sprite2D" parent="CanvasLayer" unique_id=849973493]
-position = Vector2(312, 992)
-scale = Vector2(1.27, 1.27)
+position = Vector2(491.99994, 356)
+rotation = 1.0559242
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_hs834")
 
 [node name="Earth_texture" type="Sprite2D" parent="CanvasLayer" unique_id=1032146946]
@@ -110,5 +113,8 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="Narration" type="AudioStreamPlayer" parent="." unique_id=620825585]
+bus = &"Narration"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=1924574099]
+stream = ExtResource("7_hs834")
+bus = &"Soundtrack"
