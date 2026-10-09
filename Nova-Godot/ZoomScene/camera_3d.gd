@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal earth_reached
+
 var max_velocity := Vector3(2 ,0, 2)
 var cur_velocity: Vector3
 var acceleration: float = 1
@@ -11,6 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if Input.is_action_pressed("forward"):
 		if velocity.z < 0:
 			velocity.z = lerp(velocity.z, 0.0, 4 * acceleration * delta)

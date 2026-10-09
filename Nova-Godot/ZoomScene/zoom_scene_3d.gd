@@ -1,11 +1,22 @@
 extends Node3D
 
+@onready var camera = $CharacterBody3D
+
+const earth_number: float = 36.845
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range($NarrationAreas.get_child_count()):
 		var current_area: Area3D = $NarrationAreas.get_child(i)
 		current_area.body_entered.connect(zone_reached.bind(i))
+
+
+func _physics_process(delta: float) -> void:
+	if $CharacterBody3D.position.z > earth_number:
+		$CanvasLayer/Earth_texture.show()
+		$CanvasLayer/Earth_texture.scale = Vector2(0.8 + (($CharacterBody3D.position.z - earth_number) * 25 * delta), 0.8 + (($CharacterBody3D.position.z - earth_number) * 25 * delta))
+	else:
+		$CanvasLayer/Earth_texture.hide()
 
 
 func zone_reached(body, index: int):
