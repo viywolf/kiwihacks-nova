@@ -3,16 +3,22 @@
 [ext_resource type="Script" uid="uid://8m13vsbapilk" path="res://ZoomScene/camera_3d.gd" id="1_jej76"]
 [ext_resource type="PackedScene" uid="uid://bvxddpl5p82b4" path="res://ZoomScene/cube.glb" id="1_v2q5u"]
 
-[sub_resource type="Environment" id="Environment_4wvfv"]
-
 [sub_resource type="Environment" id="Environment_8vrlf"]
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 6.65
 
+[sub_resource type="Environment" id="Environment_4wvfv"]
+
 [node name="ZoomScene" type="Node3D" unique_id=555016838]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595859487]
+environment = SubResource("Environment_8vrlf")
+
 [node name="cube" parent="." unique_id=1374397085 instance=ExtResource("1_v2q5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.8067095)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.8067095)
+
+[node name="cube2" parent="." unique_id=1070589354 instance=ExtResource("1_v2q5u")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1.7975464, 0, 7.254323)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=8015377]
 script = ExtResource("1_jej76")
@@ -25,6 +31,3 @@ environment = SubResource("Environment_4wvfv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.496911e-07, 0, 4)
 light_size = 10.0
 spot_range = 10.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595859487]
-environment = SubResource("Environment_8vrlf")
