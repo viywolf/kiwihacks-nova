@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://lvvihcdhowvj" path="res://assets/Solar+System.fbx" id="5_6rw0f"]
 [ext_resource type="Texture2D" uid="uid://bpewa60baejs2" path="res://assets/world_map.png" id="5_68dyh"]
 [ext_resource type="Texture2D" uid="uid://druor1oluvjxd" path="res://assets/nz_map.png" id="5_hs834"]
+[ext_resource type="Texture2D" uid="uid://qpbij6kepbnw" path="res://humans.png" id="6_c2rqb"]
 [ext_resource type="AudioStream" uid="uid://dk6tk34qkjfkq" path="res://audio.mp3" id="7_hs834"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bieax"]
@@ -37,6 +38,7 @@ environment = SubResource("Environment_8vrlf")
 
 [node name="Label3D" type="Label3D" parent="Node3D" unique_id=330522066]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 2.9943728)
+visible = false
 text = "Hello"
 
 [node name="Neptune" type="Label3D" parent="Node3D" unique_id=688979454]
@@ -114,40 +116,68 @@ shape = SubResource("BoxShape3D_v5gy4")
 [node name="NarrationAreas" type="Node3D" parent="." unique_id=709389806]
 
 [node name="Area1" type="Area3D" parent="NarrationAreas" unique_id=423829329]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1815205)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.1815205)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area1" unique_id=1752775303]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
 shape = SubResource("BoxShape3D_8vrlf")
 
 [node name="Area2" type="Area3D" parent="NarrationAreas" unique_id=772843662]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.121401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.121401)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area2" unique_id=1792754538]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
 shape = SubResource("BoxShape3D_8vrlf")
 
 [node name="Area3" type="Area3D" parent="NarrationAreas" unique_id=1308280174]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25.939045)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.939045)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area3" unique_id=562518133]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
 shape = SubResource("BoxShape3D_8vrlf")
 
 [node name="Area4" type="Area3D" parent="NarrationAreas" unique_id=292854183]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32.649105)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.649105)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area4" unique_id=1565689433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
+shape = SubResource("BoxShape3D_8vrlf")
+
+[node name="Area5" type="Area3D" parent="NarrationAreas" unique_id=1039026758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25.399162)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area5" unique_id=12428547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
+shape = SubResource("BoxShape3D_8vrlf")
+
+[node name="Area6" type="Area3D" parent="NarrationAreas" unique_id=2092776603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28.382877)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area6" unique_id=1643259005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
+shape = SubResource("BoxShape3D_8vrlf")
+
+[node name="Area7" type="Area3D" parent="NarrationAreas" unique_id=1907659630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36.207806)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area7" unique_id=204734350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
 shape = SubResource("BoxShape3D_8vrlf")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1537875488]
 
 [node name="NZ_map" type="Sprite2D" parent="CanvasLayer" unique_id=849973493]
+visible = false
 position = Vector2(491.99994, 356)
 rotation = 1.0559242
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_hs834")
+
+[node name="people" type="Sprite2D" parent="CanvasLayer" unique_id=1989275765]
+visible = false
+position = Vector2(533, 335)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_c2rqb")
 
 [node name="Earth_texture" type="Sprite2D" parent="CanvasLayer" unique_id=1032146946]
 visible = false
@@ -155,13 +185,23 @@ position = Vector2(340, 393)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_68dyh")
 
+[node name="urplcinspace" type="Label" parent="CanvasLayer" unique_id=1801073469]
+visible = false
+offset_left = 66.0
+offset_top = 173.0
+offset_right = 1066.0
+offset_bottom = 428.0
+theme_override_font_sizes/font_size = 60
+text = "THIS IS YOUR PLACE IN SPACE!!!!!!!!!
+!!!!!
+!!!!!!!! RAAAAAAAAAAAAA"
+
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=808959340]
 custom_minimum_size = Vector2(800, 0)
 offset_left = 180.0
-offset_top = 576.0
+offset_top = 533.0
 offset_right = 980.0
-offset_bottom = 599.0
-text = "blah blah blah text here"
+offset_bottom = 556.0
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -170,4 +210,5 @@ bus = &"Narration"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=1924574099]
 stream = ExtResource("7_hs834")
+autoplay = true
 bus = &"Soundtrack"
