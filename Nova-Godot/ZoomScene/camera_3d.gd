@@ -14,9 +14,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if position.z > 36.845:
-		max_velocity = Vector3(1, 0, 1)
-	else:
-		max_velocity = Vector3(0.3, 0, 0.3)
+		if max_velocity < Vector3(1, 0, 1):
+			max_velocity = Vector3(1, 0, 1)
 	if Input.is_action_pressed("forward"):
 		if velocity.z < 0:
 			velocity.z = lerp(velocity.z, 0.0, 4 * acceleration * delta)
@@ -33,3 +32,10 @@ func _process(delta: float) -> void:
 	elif velocity.z < -max_velocity.z:
 		velocity.z = -max_velocity.z
 	move_and_slide()
+
+
+func _on_check_box_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		max_velocity = Vector3(1 ,0, 1)
+	else:
+		max_velocity = Vector3(0.3 ,0, 0.3)

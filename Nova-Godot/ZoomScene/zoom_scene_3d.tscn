@@ -19,14 +19,18 @@ sky_material = SubResource("PanoramaSkyMaterial_bieax")
 [sub_resource type="Environment" id="Environment_8vrlf"]
 background_mode = 2
 sky = SubResource("Sky_kst6b")
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 6.65
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5gy4"]
 size = Vector3(0.91845703, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8vrlf"]
 size = Vector3(16.839355, 5.857422, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2rqb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38qeb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="ZoomScene" type="Node3D" unique_id=555016838]
 script = ExtResource("1_p78ee")
@@ -100,14 +104,6 @@ script = ExtResource("1_jej76")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1825008648]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 current = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D/Camera3D" unique_id=126423304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.496911e-07, 0, 4)
-visible = false
-light_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-light_size = 50.0
-light_bake_mode = 0
-spot_range = 1000.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=761290332]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.040771484, 0, 0)
@@ -205,6 +201,26 @@ offset_bottom = 556.0
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="BackButton" type="Button" parent="CanvasLayer" unique_id=1802605450]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c2rqb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_38qeb")
+text = "🔙"
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer" unique_id=1186577985]
+offset_left = 1013.0
+offset_right = 1136.0
+offset_bottom = 31.0
+text = "Toggle Boost"
+
+[node name="Instructions" type="Label" parent="CanvasLayer" unique_id=621523119]
+offset_left = 521.0
+offset_right = 602.0
+offset_bottom = 23.0
+text = "Hold ↑ or ↓"
+
 [node name="Narration" type="AudioStreamPlayer" parent="." unique_id=620825585]
 bus = &"Narration"
 
@@ -212,3 +228,6 @@ bus = &"Narration"
 stream = ExtResource("7_hs834")
 autoplay = true
 bus = &"Soundtrack"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="toggled" from="CanvasLayer/CheckBox" to="CharacterBody3D" method="_on_check_box_toggled"]

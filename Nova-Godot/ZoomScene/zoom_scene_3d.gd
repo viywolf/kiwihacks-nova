@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		$CanvasLayer/Earth_texture.hide()
 		$CanvasLayer/NZ_map.hide()
+		$CanvasLayer/people.hide()
 
 
 func zone_reached(body, index: int):
@@ -58,3 +59,11 @@ func zone_reached(body, index: int):
 		$CanvasLayer/Label.visible_characters += 1
 		await get_tree().create_timer(0.05).timeout
 	
+
+
+func _on_back_button_pressed() -> void:
+	$CharacterBody3D.position.z = 0
+
+
+func _on_check_box_toggled(toggled_on: bool) -> void:
+	pass # Replace with function body.

@@ -13,7 +13,8 @@ config_version=5
 config/name="Kiwihacks Nova"
 run/main_scene="uid://by7ete83c3n1l"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://b8r043n6dk0g"
+config/icon="uid://diotsff8j4x0o"
 "<<<<<<<HEAD[audio]buses/default_bus_layout"="uid://dr12rv7f3m764"
 
 [audio]
