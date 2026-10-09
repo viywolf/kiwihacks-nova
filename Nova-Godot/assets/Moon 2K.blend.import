@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://co72ddbet1soq"
-path="res://.godot/imported/Moon 2K.blend-a84cd89fb1d5560e03e83e168f5ebb51.scn"
+path="res://.godot/imported/Moon 2K.blend-474421db0f86de60f7b594e0b699beff.scn"
 
 [deps]
 
-source_file="res://ZoomScene/Moon 2K.blend"
-dest_files=["res://.godot/imported/Moon 2K.blend-a84cd89fb1d5560e03e83e168f5ebb51.scn"]
+source_file="res://assets/Moon 2K.blend"
+dest_files=["res://.godot/imported/Moon 2K.blend-474421db0f86de60f7b594e0b699beff.scn"]
 
 [params]
 

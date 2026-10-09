@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://8m13vsbapilk" path="res://ZoomScene/camera_3d.gd" id="1_jej76"]
 [ext_resource type="Script" uid="uid://b0vbkac6ngnsm" path="res://ZoomScene/zoom_scene_3d.gd" id="1_p78ee"]
 [ext_resource type="PackedScene" uid="uid://bvxddpl5p82b4" path="res://ZoomScene/cube.glb" id="1_v2q5u"]
-[ext_resource type="PackedScene" uid="uid://co72ddbet1soq" path="res://ZoomScene/Moon 2K.blend" id="4_68dyh"]
+[ext_resource type="PackedScene" uid="uid://co72ddbet1soq" path="res://assets/Moon 2K.blend" id="4_68dyh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bieax"]
 panorama = ExtResource("1_jaafw")
