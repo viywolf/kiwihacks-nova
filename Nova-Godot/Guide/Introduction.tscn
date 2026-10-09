@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://3x3eqxa76nme"]
+
+[ext_resource type="Texture2D" uid="uid://6oxevg6h6m4u" path="res://assets/textures/stars_milky_way.jpg" id="1_12k3b"]
+[ext_resource type="Script" uid="uid://dfj0qqsxp7ayq" path="res://Guide/introduction.gd" id="1_q1j6f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.08620838, 0.08925489, 0.12509745, 0.6901961)
+
+[node name="Introduction" type="Node2D" unique_id=1162424346]
+script = ExtResource("1_q1j6f")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2005033675]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3534.0
+offset_top = -1130.0
+offset_right = 3506.0
+offset_bottom = 2318.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_12k3b")
+
+[node name="Panel" type="Panel" parent="." unique_id=1054206163]
+offset_left = 285.0
+offset_top = 25.0
+offset_right = 840.0
+offset_bottom = 624.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1408523919]
+offset_left = 303.0
+offset_top = 34.0
+offset_right = 823.0
+offset_bottom = 624.0
+
+[node name="Label" type="Label" parent="ScrollContainer" unique_id=421956046]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+text = "The observable universe is a spherical region of the universe centered on the observer containing all the matter and energy whose light or signals have had time to reach Earth since the Big Bang 13.8 billion years ago. 
+
+Contents of the Observable Universe
+Galaxies: Astronomers estimate that the observable universe contains at least 100 billion to 2nd trillion galaxies, each packed with billions or trillions of stars. 
+
+Stars and Planets: There are roughly 10 sextillion (10 followed by 22 zeros) individual stars, along with countless planetary systems, gas clouds, and stellar remnants like black holes and neutron stars. 
+
+Ordinary Matter: All the normal atoms that make up stars, planets, dust, and living things account for a total mass of ordinary matter estimated at about 1.5 × 10⁵³ kg 
+Dark Matter and Dark Energy: The visible matter we can detect makes up only a small fraction of the total; the rest consists largely of invisible dark matter (which pulls matter together) and dark energy (which drives the accelerated expansion of space) 
+
+At the outermost edge of our view lies the CMB, which is the leftover thermal radiation from the very early universe, dating back to about 380,000 years after the Big Bang.
+
+Stellar Classifications and Habitability
+Stars are massive nuclear reactors that forge the heavy chemical elements—such as carbon, oxygen, and iron—that are essential for building planets and living organisms. A star's mass dictates its temperature, brightness, and total lifespan, directly influencing whether nearby planets have enough stable energy to develop life. 
+
+"
+autowrap_mode = 3
