@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://8m13vsbapilk" path="res://ZoomScene/camera_3d.gd" id="1_jej76"]
 [ext_resource type="Script" uid="uid://b0vbkac6ngnsm" path="res://ZoomScene/zoom_scene_3d.gd" id="1_p78ee"]
 [ext_resource type="Texture2D" uid="uid://6oxevg6h6m4u" path="res://assets/textures/stars_milky_way.jpg" id="2_6rw0f"]
-[ext_resource type="PackedScene" uid="uid://co72ddbet1soq" path="res://assets/Moon 2K.blend" id="4_68dyh"]
+[ext_resource type="PackedScene" uid="uid://btjjhxbjccdrp" path="res://assets/Neptune.fbx" id="4_wn317"]
 [ext_resource type="PackedScene" uid="uid://lvvihcdhowvj" path="res://assets/Solar+System.fbx" id="5_6rw0f"]
+[ext_resource type="Texture2D" uid="uid://bpewa60baejs2" path="res://assets/world_map.png" id="5_68dyh"]
+[ext_resource type="Texture2D" uid="uid://druor1oluvjxd" path="res://assets/nz_map.png" id="5_hs834"]
+[ext_resource type="AudioStream" uid="uid://dk6tk34qkjfkq" path="res://audio.mp3" id="7_hs834"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bieax"]
 panorama = ExtResource("2_6rw0f")
@@ -30,11 +33,64 @@ script = ExtResource("1_p78ee")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1595859487]
 environment = SubResource("Environment_8vrlf")
 
-[node name="Moon 2K" parent="." unique_id=476626218 instance=ExtResource("4_68dyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.526986, 0.33641768, 7.6804557)
+[node name="Node3D" type="Node3D" parent="." unique_id=546471995]
+
+[node name="Label3D" type="Label3D" parent="Node3D" unique_id=330522066]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 2.9943728)
+text = "Hello"
+
+[node name="Neptune" type="Label3D" parent="Node3D" unique_id=688979454]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.1219261, 0, 2.2590888)
+text = "Neptune - the planet of stingrays"
+font_size = 14
+
+[node name="Uranus" type="Label3D" parent="Node3D" unique_id=680031059]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.73804617, 0, 9.30354)
+text = "Uranus - Planet of unfortunate names"
+font_size = 14
+
+[node name="Saturn" type="Label3D" parent="Node3D" unique_id=1460326158]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.73804617, 0, 14.119423)
+text = "Saturn - Planet of divorce"
+font_size = 14
+
+[node name="Jupiter" type="Label3D" parent="Node3D" unique_id=458835623]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.73804617, 0, 20.47432)
+text = "Jupiter - Planet of apples"
+font_size = 14
+
+[node name="Asteroid" type="Label3D" parent="Node3D" unique_id=131259873]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.73804617, 0, 25.810766)
+text = "Asteroid belt - a bunch of gravel"
+font_size = 14
+
+[node name="Mars" type="Label3D" parent="Node3D" unique_id=471048975]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.73804617, 0, 33.58705)
+text = "Mars - backup earth for rich people"
+font_size = 14
+
+[node name="Earth" type="Label3D" parent="Node3D" unique_id=97528626]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.73804617, 0, 36.45637)
+text = "Earth - You could say that this is... our place in space"
+font_size = 14
+
+[node name="Moon" type="Label3D" parent="Node3D" unique_id=788421037]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3748071, 0, 37.172207)
+text = "Moon. It's just a random rock but people care about it for some reason"
+font_size = 7
+autowrap_mode = 3
+
+[node name="BoringStuff" type="Label3D" parent="Node3D" unique_id=1209393544]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.1522305, 0.19291532, 38.592827)
+text = "No one cares about stuff behind here"
+font_size = 7
+autowrap_mode = 3
 
 [node name="Solar+System" parent="." unique_id=1102779928 instance=ExtResource("5_6rw0f")]
-transform = Transform3D(0.061273035, 0, 0.998121, 0, 1, 0, -0.998121, 0, 0.061273035, -3.1339312, -16.900059, 65.65058)
+transform = Transform3D(-0.032872073, 0, 0.99945956, 0, 1, 0, -0.99945956, 0, -0.032872073, -1.6851797, -17.5, 71.074776)
+
+[node name="Neptune" parent="." unique_id=326228804 instance=ExtResource("4_wn317")]
+transform = Transform3D(-0.061770745, 0, 0.05083675, 0, 0.08, 0, -0.05083675, 0, -0.061770745, -1.0777942, -0.5538533, 2.6488047)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=8015377]
 script = ExtResource("1_jej76")
@@ -45,7 +101,10 @@ current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D/Camera3D" unique_id=126423304]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.496911e-07, 0, 4)
-light_size = 100.0
+visible = false
+light_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+light_size = 50.0
+light_bake_mode = 0
 spot_range = 1000.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=761290332]
@@ -54,23 +113,61 @@ shape = SubResource("BoxShape3D_v5gy4")
 
 [node name="NarrationAreas" type="Node3D" parent="." unique_id=709389806]
 
-[node name="Area3D" type="Area3D" parent="NarrationAreas" unique_id=423829329]
+[node name="Area1" type="Area3D" parent="NarrationAreas" unique_id=423829329]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1815205)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area3D" unique_id=1752775303]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area1" unique_id=1752775303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
+shape = SubResource("BoxShape3D_8vrlf")
+
+[node name="Area2" type="Area3D" parent="NarrationAreas" unique_id=772843662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.121401)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area2" unique_id=1792754538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
+shape = SubResource("BoxShape3D_8vrlf")
+
+[node name="Area3" type="Area3D" parent="NarrationAreas" unique_id=1308280174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25.939045)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area3" unique_id=562518133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
+shape = SubResource("BoxShape3D_8vrlf")
+
+[node name="Area4" type="Area3D" parent="NarrationAreas" unique_id=292854183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32.649105)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NarrationAreas/Area4" unique_id=1565689433]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5773926, 0.1792078, 0)
 shape = SubResource("BoxShape3D_8vrlf")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1537875488]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=808959340]
+[node name="NZ_map" type="Sprite2D" parent="CanvasLayer" unique_id=849973493]
+position = Vector2(491.99994, 356)
+rotation = 1.0559242
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_hs834")
+
+[node name="Earth_texture" type="Sprite2D" parent="CanvasLayer" unique_id=1032146946]
 visible = false
-offset_left = 480.0
+position = Vector2(340, 393)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_68dyh")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=808959340]
+custom_minimum_size = Vector2(800, 0)
+offset_left = 180.0
 offset_top = 576.0
-offset_right = 665.0
+offset_right = 980.0
 offset_bottom = 599.0
 text = "blah blah blah text here"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Narration" type="AudioStreamPlayer" parent="." unique_id=620825585]
+bus = &"Narration"
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=1924574099]
+stream = ExtResource("7_hs834")
+bus = &"Soundtrack"
