@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://8m13vsbapilk" path="res://ZoomScene/camera_3d.gd" id="1_jej76"]
 [ext_resource type="Script" uid="uid://b0vbkac6ngnsm" path="res://ZoomScene/zoom_scene_3d.gd" id="1_p78ee"]
 [ext_resource type="PackedScene" uid="uid://bvxddpl5p82b4" path="res://ZoomScene/cube.glb" id="1_v2q5u"]
+[ext_resource type="PackedScene" uid="uid://co72ddbet1soq" path="res://ZoomScene/Moon 2K.blend" id="4_68dyh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bieax"]
 panorama = ExtResource("1_jaafw")
@@ -32,6 +33,9 @@ environment = SubResource("Environment_8vrlf")
 [node name="cube" parent="." unique_id=1374397085 instance=ExtResource("1_v2q5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3.8067095)
 
+[node name="Moon 2K" parent="." unique_id=476626218 instance=ExtResource("4_68dyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.526986, 0.33641768, 7.6804557)
+
 [node name="cube2" parent="." unique_id=1070589354 instance=ExtResource("1_v2q5u")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1.7975464, 0, 7.254323)
 
@@ -40,6 +44,7 @@ script = ExtResource("1_jej76")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1825008648]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D/Camera3D" unique_id=126423304]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.496911e-07, 0, 4)

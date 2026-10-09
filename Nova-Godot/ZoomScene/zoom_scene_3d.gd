@@ -8,10 +8,6 @@ func _ready() -> void:
 		current_area.body_entered.connect(zone_reached.bind(i))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func zone_reached(body, index: int):
 	print("reached zone " + str(index))
 	$CanvasLayer/Label.show()
