@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://by7ete83c3n1l"]
+
+[ext_resource type="Script" uid="uid://bwf6esuf3vjnr" path="res://Main menu/control.gd" id="1_abe6y"]
+[ext_resource type="Script" uid="uid://fn3xcttd3tlh" path="res://Main menu/Volume slider.gd" id="2_lnxol"]
+[ext_resource type="AudioStream" uid="uid://tgagdykvqruk" path="res://audio.mp3" id="3_iwao0"]
+
+[node name="Control" type="Control" unique_id=1904302374]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_abe6y")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1532234052]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.033585895, 0.02161224, 0.085212536, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=344058597]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=538231847]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=391424403]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="CenterContainer/VBoxContainer" unique_id=90961921]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=478758695]
+layout_mode = 2
+text = "Exit"
+
+[node name="Settings" type="Control" parent="." unique_id=1362636146]
+visible = false
+anchors_preset = 0
+offset_left = 483.0
+offset_top = 209.0
+offset_right = 523.0
+offset_bottom = 249.0
+
+[node name="Panel" type="Panel" parent="Settings" unique_id=2066613870]
+layout_mode = 0
+offset_right = 217.0
+offset_bottom = 208.0
+
+[node name="Label" type="Label" parent="Settings/Panel" unique_id=143819873]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Settings menu!!!!"
+
+[node name="Button" type="Button" parent="Settings/Panel" unique_id=1154848767]
+layout_mode = 0
+offset_left = 183.0
+offset_top = -1.0
+offset_right = 217.0
+offset_bottom = 30.0
+text = "X"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Panel" unique_id=2073399157]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 35.0
+offset_right = 200.0
+offset_bottom = 75.0
+
+[node name="Label" type="Label" parent="Settings/Panel/VBoxContainer" unique_id=1932316217]
+layout_mode = 2
+text = "Music volume"
+
+[node name="Volume slider" type="HSlider" parent="Settings/Panel/VBoxContainer" unique_id=635890942]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_lnxol")
+
+[node name="CheckBox" type="CheckBox" parent="Settings/Panel/VBoxContainer" unique_id=690384903]
+layout_mode = 2
+text = "Narration"
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="." unique_id=1890087015]
+stream = ExtResource("3_iwao0")
+autoplay = true
+bus = &"Soundtrack"
+
+[node name="Narration" type="AudioStreamPlayer" parent="." unique_id=1700156256]
+bus = &"Narration"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

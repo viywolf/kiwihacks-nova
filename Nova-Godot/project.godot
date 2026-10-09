@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Kiwihacks Nova"
-run/main_scene="uid://dq7hdrh017dgy"
+run/main_scene="uid://by7ete83c3n1l"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://dr12rv7f3m764"
 
 [display]
 
