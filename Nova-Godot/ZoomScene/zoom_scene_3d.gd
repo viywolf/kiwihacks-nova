@@ -32,6 +32,7 @@ func zone_reached(body, index: int):
 	$CanvasLayer/Label.show()
 	$CanvasLayer/Label.text = Narration.narration_text[index]
 	$CanvasLayer/Label.visible_characters = 0
+	$Narration.stream = load("res://audio.mp3")
 	$Narration.play()
 	while $CanvasLayer/Label.visible_characters < len($CanvasLayer/Label.text):
 		$CanvasLayer/Label.visible_characters += 1
